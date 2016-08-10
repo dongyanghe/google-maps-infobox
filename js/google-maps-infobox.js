@@ -14,8 +14,8 @@ function InfoBox(opts) {
     this.latlng_ = opts.latlng;
     this.map_ = opts.map;
     this.content = opts.content;
-    this.offsetVertical_ = 0;
-    this.offsetHorizontal_ = 0;
+    this.offsetVertical_ = opts.offsetVertical_ || 0;
+    this.offsetHorizontal_ = opts.offsetHorizontal_ || 0;
     var me = this;
     this.boundsChangedListener_ =
         google.maps.event.addListener(this.map_, "bounds_changed", function () {
