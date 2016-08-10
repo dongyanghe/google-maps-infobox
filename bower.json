@@ -1,0 +1,22 @@
+{
+  "name": "google-maps-infobox",
+  "homepage": "https://github.com/zukilover/google-maps-infobox",
+  "authors": [
+    "Heri Setiawan <hello@kedaipixel.com>"
+  ],
+  "description": "Custom Google Maps infobox using OverlayView",
+  "main": "js/google-maps-infobox.js",
+  "keywords": [
+    "google",
+    "maps",
+    "infobox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
