@@ -14,10 +14,8 @@ function InfoBox(opts) {
     this.latlng_ = opts.latlng;
     this.map_ = opts.map;
     this.content = opts.content;
-    this.offsetVertical_ = -195;
-    this.offsetHorizontal_ = 5;
-    this.height_ = 165;
-    this.width_ = 266;
+    this.offsetVertical_ = 0;
+    this.offsetHorizontal_ = 0;
     var me = this;
     this.boundsChangedListener_ =
         google.maps.event.addListener(this.map_, "bounds_changed", function () {
@@ -50,9 +48,7 @@ InfoBox.prototype.draw = function () {
     var pixPosition = this.getProjection().fromLatLngToDivPixel(this.latlng_);
     if (!pixPosition) return;
     // Now position our DIV based on the DIV coordinates of our bounds
-    this.div_.style.width = this.width_ + "px";
     this.div_.style.left = (pixPosition.x + this.offsetHorizontal_) + "px";
-    this.div_.style.height = this.height_ + "px";
     this.div_.style.top = (pixPosition.y + this.offsetVertical_) + "px";
     this.div_.style.display = 'block';
 };
